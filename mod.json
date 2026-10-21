@@ -1,0 +1,42 @@
+{
+  "geode": "4.0.0",
+  "gd": {
+    "win": "2.2074",
+    "android": "2.2074",
+    "mac": "2.2074"
+  },
+  "id": "yourname.click-snap",
+  "name": "Click Snap",
+  "version": "v1.0.0",
+  "developer": "yourname",
+  "description": "Records where you click on completed runs. If you click slightly early next time, the click is held back and fired at the recorded spot.",
+  "settings": {
+    "enabled": {
+      "type": "bool",
+      "name": "Enabled",
+      "default": true
+    },
+    "window": {
+      "type": "float",
+      "name": "Early window (units)",
+      "description": "How far ahead of a recorded click (in game units, 30 = 1 block) an early press gets delayed.",
+      "default": 20.0,
+      "min": 2.0,
+      "max": 90.0,
+      "control": {
+        "slider": true
+      }
+    },
+    "deathTrim": {
+      "type": "float",
+      "name": "Death trim (units)",
+      "description": "When you die, clicks within this distance before the death are discarded (the mistimed click that killed you). Everything earlier is kept.",
+      "default": 30.0,
+      "min": 0.0,
+      "max": 120.0,
+      "control": {
+        "slider": true
+      }
+    }
+  }
+}
